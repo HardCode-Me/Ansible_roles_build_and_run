@@ -1,2 +1,4 @@
 ---
 # defaults file for web
+src_file: /tmp/hello-1.0.war
+dest_folder: /var/lib/tomcat9/webapps

@@ -1,2 +1,13 @@
 ---
 # tasks file for web
+- name: install packages
+  apt: name={{ item }} state=present
+  with_items:
+    - tomcat9
+
+- name: copy file from host
+  copy:
+    src: {{ src_file }}
+    dest: {{ dest_folder }}
+    notify:
+      - restart tomcat

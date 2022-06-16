@@ -1,2 +1,22 @@
 ---
 # tasks file for build
+- name: install maven and git
+  apt: name={{ item }} state=present
+  with_items:
+    - maven
+
+- name: git clone repo
+  git:
+    repo: {{ repo_url }}
+    dest: {{ work_dir }}
+
+- name: compile and package war file
+  command: 'mvn  package'
+  args:
+    chdir: {{ work_dir }}
+
+- name: fetch file to host
+  fetch:
+    src: {{ work_dir }}/target/hello-1.0.war
+    dest: /tmp/
+    flat: yes
