@@ -17,6 +17,6 @@
 
 - name: fetch file to host
   fetch:
-    src: {{ work_dir }}/target/hello-1.0.war
+    src: "{{ work_dir }}"/target/hello-1.0.war
     dest: /tmp/
     flat: yes
