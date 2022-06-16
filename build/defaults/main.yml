@@ -1,4 +1,4 @@
 ---
 # defaults file for build
 work_dir: /tmp/boxfuse-sample-java-war-hello
-repo_url: 'https://github.com/boxfuse/boxfuse-sample-java-war-hello'
+repo_url: https://github.com/boxfuse/boxfuse-sample-java-war-hello
