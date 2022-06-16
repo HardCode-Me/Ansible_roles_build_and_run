@@ -9,5 +9,5 @@
   copy:
     src: '{{ src_file }}'
     dest: '{{ dest_folder }}'
-    notify:
-      - restart tomcat
+  notify:
+    - restart tomcat
